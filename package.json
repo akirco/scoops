@@ -1,0 +1,29 @@
+{
+  "name": "scoops",
+  "version": "0.1.0",
+  "description": "",
+  "bin": {
+    "scoops": "./bin/scoops"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./"
+  },
+  "keywords": [
+    "cli",
+    "scoop-search"
+  ],
+  "scripts": {
+    "pkg": "pkg bin/scoops -t  node16-win-x64 --out-path ./dist/scoops",
+    "dist": "node build.js"
+  },
+  "author": "akirco",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.0",
+    "single-line-log": "^1.1.2"
+  },
+  "devDependencies": {
+    "7zip-min": "^1.4.3"
+  }
+}
