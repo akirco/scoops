@@ -1,10 +1,9 @@
 "use strict";
-
-async function search_local(args) {
+const { searchLocal } = require("./lib/utils");
+function search_local(args) {
   if (args.length !== 0) {
-    console.log("search apps from local buckets");
     const app = args[0].startsWith("-") ? args[1] : args[0];
-    console.log(app);
+    searchLocal(app);
   }
 }
 

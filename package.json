@@ -20,6 +20,7 @@
   "author": "akirco",
   "license": "ISC",
   "dependencies": {
+    "cli-table": "^0.3.11",
     "commander": "^9.4.0",
     "node-powershell": "^5.0.1",
     "single-line-log": "^1.1.2"
