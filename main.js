@@ -1,5 +1,6 @@
 "use strict";
-const { searchLocal } = require("./lib/utils");
+const { searchLocal, searchRemote } = require("./lib/utils");
+
 function search_local(args) {
   if (args.length !== 0) {
     const app = args[0].startsWith("-") ? args[1] : args[0];
@@ -9,9 +10,8 @@ function search_local(args) {
 
 async function search_remote(args) {
   if (args.length !== 0) {
-    console.log("search apps from remote buckets");
     const app = args[0].startsWith("-") ? args[1] : args[0];
-    console.log(app);
+    searchRemote(app);
   }
 }
 
