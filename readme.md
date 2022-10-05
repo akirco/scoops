@@ -18,7 +18,7 @@ Options:
   -h, --help     display help for command
 
   Example:
-    remote search: $ scoops <wechat> [-r/--remote] [count,default=20]
+    remote search: $ scoops <wechat> <-r/--remote> [count,default=20]
 
     local search: $ scoops <wechat> [-l/--local]
 ```
