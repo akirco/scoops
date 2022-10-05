@@ -17,7 +17,9 @@ program.addHelpText(
   "after",
   `
   Example:
-    $ scoops <wechat> [-l]`
+    remote search: $ scoops <wechat> [-r/--remote] [count,default=20] \n
+    local search: $ scoops <wechat> [-l/--local]
+    `
 );
 
 program.parse(argv);
@@ -35,6 +37,6 @@ if (remote) {
 }
 
 //如果没参数直接打印帮助信息
-if (!argv.slice(2).length || argv.length > 4) {
+if (!argv.slice(2).length) {
   program.help({ error: true });
 }
