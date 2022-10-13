@@ -4,36 +4,43 @@
 const { program } = require("commander");
 const { version } = require("../package.json");
 const { argv } = process;
-const { search_local, search_remote } = require("../main");
+const { search_local, search_remote, update_Source } = require("../main");
 
 //自定义帮助信息
 program.version(version, "-v, --version", "output the current version");
 
 program
   .option("-l,--local", "search apps from local buckets", true)
-  .option("-r,--remote", "search apps from remote buckets");
+  .option("-r,--remote", "search apps from remote buckets")
+  .option("-u,--update", "update local source");
 
 program.addHelpText(
   "after",
   `
   Example:
     remote search: $ scoops <wechat> [-r/--remote] [count,default=20] \n
-    local search: $ scoops <wechat> [-l/--local]
+    local search: $ scoops <wechat> [-l/--local] \n
+    update local source: $ scoops -u
     `
 );
 
 program.parse(argv);
 
 const options = program.opts();
-const { local, remote } = options;
 
-if (local && remote === undefined) {
+const { local, remote, update } = options;
+
+if (local && remote === undefined && update === undefined) {
   const app = argv.slice(2);
   search_local(app);
 }
 if (remote) {
   const app = argv.slice(2);
   search_remote(app);
+}
+
+if (local && update) {
+  update_Source();
 }
 
 //如果没参数直接打印帮助信息

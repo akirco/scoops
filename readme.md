@@ -3,7 +3,7 @@
 - install
 
 ```powershell
-# Hash:78B2D858884F7995CB8CDD5D3CAC70EF4DE3A8BF9E9DDE6BDB32975570F6F56B
+# Hash:C800563B3CDF73B7909A9BC554AD088644A7854875D1DEDD73B80703576BEABE
 scoop bucket add aki 'https://github.com/akirco/aki-apps.git'
 scoop i scoops
 ```
@@ -21,7 +21,8 @@ Options:
     remote search: $ scoops <wechat> <-r/--remote> [count,default=20]
 
     local search: $ scoops <wechat> [-l/--local]
+
+    update local source: $ scoops -u
 ```
 
 ---
-
