@@ -3,7 +3,7 @@
 - install
 
 ```powershell
-# Hash:C800563B3CDF73B7909A9BC554AD088644A7854875D1DEDD73B80703576BEABE
+# Hash:6419C35288BF483547D1BBD0520C7A55D8CBF6CA153CF8B68156A36A2C26DEC8
 scoop bucket add aki 'https://github.com/akirco/aki-apps.git'
 scoop i scoops
 ```
